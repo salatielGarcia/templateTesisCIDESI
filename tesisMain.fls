@@ -571,8 +571,8 @@ INPUT /usr/share/texmf-dist/tex/latex/nimbus15/T1NimbusMonoN.fd
 INPUT /usr/share/texmf-dist/tex/latex/nimbus15/T1NimbusMonoN.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/public/nimbus15/zcoN-Regular-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertinus-type1/LibertinusSerif-Italic-tlf-t1.tfm
-INPUT ./pgf/metodologia.tex
-INPUT ./pgf/metodologia.tex
+INPUT ./img/metodologia.tex
+INPUT ./img/metodologia.tex
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertinus-type1/LibertinusSerif-Italic-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertinus-type1/LibertinusSerif-Italic-tlf-t1--base.tfm
 OUTPUT backg.aux
