@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.7)  25 NOV 2020 23:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.7)  25 NOV 2020 23:06
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1565,19 +1565,19 @@ LaTeX Info: Redefining \% on input line 26.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 289.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 289.
 Package rerunfilecheck Info: File `tesisMain.out' has not changed.
-(rerunfilecheck)             Checksum: F94C7E304D5B6286EE86EA7232C5DF69;2097.
+(rerunfilecheck)             Checksum: 2B7C0FA3D54C8E6187681D95C110F124;2000.
 Package logreq Info: Writing requests to 'tesisMain.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  61692 strings out of 480478
  1460389 string characters out of 5905959
- 2402353 words of memory out of 5000000
+ 2402335 words of memory out of 5000000
  76738 multiletter control sequences out of 15000+600000
  607569 words of font info for 83 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  80i,11n,136p,887b,1969s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbts_cb34qf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbts_nufysp.enc}{/usr/share/texmf-dist/fonts/enc/dvips/nimbus15/nimbus15mono-ec.enc}{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbts_75t36g.enc}{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbts_sfissr.enc}</usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/nimbus15/zcoN-Regular.pfb>
-Output written on tesisMain.pdf (21 pages, 367248 bytes).
+Output written on tesisMain.pdf (21 pages, 364504 bytes).
 PDF statistics:
  271 PDF objects out of 1000 (max. 8388607)
  231 compressed objects within 3 object streams
