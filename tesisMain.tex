@@ -1,0 +1,289 @@
+% =================================================================
+%                   Template de tesis para CIDESI
+%                   Elaborado por: Salatiel García
+% =================================================================
+\documentclass[12pt,twoside]{report} % Agregar opción 'draft' para reducir tiempo de compilación
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,centering,margin=2cm]{geometry}%agregar showframe, para mostrar margenes
+\usepackage{libertinus}
+% \renewcommand*\ttdefault{lm}
+\usepackage[]{nimbusmononarrow}
+% \renewcommand{\sfdefault}{phv}
+% \renewcommand{\rmdefault}{ptm}
+
+\usepackage[chapter,newfloat]{minted}
+\setminted{
+	autogobble,
+	baselinestretch=0.9,
+	encoding=utf8,
+	fontsize=\footnotesize,
+	python3=true,
+	obeytabs=false,
+	tabsize=4,
+	style=default,
+	xleftmargin=0mm,
+	bgcolor=gray!5,
+}
+\usepackage[bf]{caption}
+\SetupFloatingEnvironment{listing}{name=Código}
+\usepackage[hyperref=true,
+            url=false,
+            isbn=false,
+            backref=true, 
+			backrefstyle=all+,
+            style=ieee,
+			dashed=false,
+            % citereset=chapter,
+            maxcitenames=3,
+            maxbibnames=100,
+            block=space,]{biblatex}
+\addbibresource{tesisMain.bib}
+\usepackage{tocloft}
+% \cftsetindents{section}{1.5cm}{1.5cm}
+% \cftsetindents{subsection}{1.5cm}{1.5cm}
+% \cftsetindents{subsubsection}{1.5cm}{1.5cm}
+% \cftsetindents{paragraph}{1.5cm}{1.5cm}
+
+\usepackage[spanish,activeacute,es-lcroman,es-noquoting,es-tabla]{babel}
+\decimalpoint
+\usepackage{hyphenat}
+\usepackage{enumitem}
+\hyphenation{Tran-sac-tions The-o-ry ex-pe-ri-men-ta-ción}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{steinmetz} %For the angle notation
+\usepackage{xfp}
+\usepackage{siunitx}
+\sisetup{scientific-notation = engineering,parse-numbers=true,per-mode = symbol-or-fraction,exponent-to-prefix, round-mode=places,round-precision=2,fixed-exponent=3,zero-decimal-to-integer=true}
+\usepackage{booktabs}
+\usepackage{subfig}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows,fit}
+\tikzset{lastxy/.code n args={2}{\pgfgetlastxy{#1}{#2}}}
+\usepackage[american,siunitx,RPvoltages]{circuitikz}
+\usepackage{pgfplots}
+\tikzstyle{arrow} = [-{Stealth[length=5mm, width=3mm]}]
+\usepgfplotslibrary{units}
+\pgfplotsset{compat=newest,
+		legend pos=outer north east,
+		y axis style/.style={
+			yticklabel style=#1,
+			ylabel style=#1,
+			y axis line style=#1,
+			ytick style=#1
+			},
+		every tick label/.append style={font=\small},
+		minor grid style={gray!15},
+		grid style={gray!50},
+		width=0.55\textwidth,
+		height = 0.25\textheight,
+		minor tick num=4,
+		axis y line=left,
+		axis on top=false,
+		axis x line=bottom,
+		grid=both,
+		legend style={font=\footnotesize},
+		label style={font=\small},
+		use units,
+		unit markings=parenthesis,
+		unit code/.code 2 args={\si{#1#2}},
+		}
+\usepackage{pdfpages}
+\usepackage{titlesec}
+\newcommand{\bigrule}{\titlerule[0.5mm]}
+\titleformat{\chapter}[display] % cambiamos el formato de los
+{\bfseries\Huge} % por defecto se usarán caracteres de tamaño
+{% contenido de la etiqueta
+\titlerule % línea horizontal
+\filleft % texto alineado a la derecha
+\Large\chaptertitlename\ % "Capítulo" o "Apéndice" en tamaño
+\Large\thechapter} % número de capítulo en tamaño \Large
+{0mm} % espacio mínimo entre etiqueta y cuerpo
+{\filleft} % texto del cuerpo alineado a la derecha
+[\vspace{0.5mm} \bigrule] % después del cuerpo, dejar espacio
+
+\setlength{\parskip}{2.5ex plus 0.2ex minus 0.2ex}
+\setlength{\abovedisplayskip}{2.0ex plus 0.2ex minus 0.2ex}
+\setlength{\belowdisplayskip}{2.0ex plus 0.2ex minus 0.2ex}
+\setlength{\textfloatsep}{3.5ex plus 0.2ex minus 0.2ex}
+\setlength{\floatsep}{3.5ex plus 0.2ex minus 0.2ex}
+\setlength{\intextsep}{3.5ex plus 0.2ex minus 0.2ex}
+\setlength{\belowcaptionskip}{-\baselineskip}      %
+\addtolength{\belowcaptionskip}{3.5ex plus 0.2ex minus 0.2ex}             %Define el espacio vertical entre figuras 1.5ex 
+
+\global\hyphenpenalty=1000
+\hbadness=5000
+\vbadness=1000
+\hfuzz=5pt
+\vfuzz=5pt
+\binoppenalty=9999  % default 700
+\relpenalty=9999     % default 500
+\emergencystretch=1.5em
+
+\marginparsep      10pt
+\marginparwidth    20pt
+\marginparpush     25pt
+
+% if things get too close, go ahead and let them touch
+\lineskip            0pt
+\normallineskip      0pt
+\lineskiplimit       0pt
+\normallineskiplimit 0pt
+
+% The distance from the lower edge of the text body to the
+% footline
+\footskip 8ex
+\parindent    0.0em        %Identación de parrafos
+\linespread{1.4}         %Espaciado entre renglones
+
+\renewcommand{\thesubsubsection}{\Alph{subsubsection}}
+\setcounter{secnumdepth}{4}
+% Definir corrientes de distintos colores en circuitos
+\makeatletter
+\ctikzset{current arrow color/.initial=black}% create key
+\pgfdeclareshape{currarrow}{
+    \anchor{center}{
+        \pgfpointorigin
+    }
+        \anchor{tip}{
+        \pgfpointorigin
+            \pgf@circ@res@step = \pgf@circ@Rlen
+                \divide \pgf@circ@res@step by 16
+        \pgf@x  =\pgf@circ@res@step
+        }
+    \behindforegroundpath{      
+
+        \pgfscope
+            \pgf@circ@res@step = \pgf@circ@Rlen
+            \divide \pgf@circ@res@step by 16
+
+            \pgfpathmoveto{\pgfpoint{-.7\pgf@circ@res@step}{0pt}}
+            \pgfpathlineto{\pgfpoint{-.7\pgf@circ@res@step}{-.8\pgf@circ@res@step}}
+            \pgfpathlineto{\pgfpoint{1\pgf@circ@res@step}{0pt}}
+            \pgfpathlineto{\pgfpoint{-.7\pgf@circ@res@step}{.8\pgf@circ@res@step}}
+            \pgfpathlineto{\pgfpoint{-.7\pgf@circ@res@step}{0pt}}           
+            \pgfsetcolor{\pgfkeysvalueof{/tikz/circuitikz/current arrow color}}
+            \pgfusepath{draw,fill}
+
+        \endpgfscope
+    }
+}
+\makeatother
+
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{
+  \clearpage
+  {\pagestyle{empty}\origdoublepage}
+}
+
+\newcommand{\finalDeSec}[1]{
+	\begin{minipage}[c]{0.99\textwidth}
+		\[
+			\S
+		\]
+	#1 \hfill
+	\vfill 
+	\end{minipage}
+		}	
+	
+\providecommand\phantomsection{}
+\pdfoptionpdfminorversion 6
+\usepackage[pdftex,colorlinks=false]{hyperref}
+\hypersetup{
+   linktoc=all,
+   pdfborder={0 0 0},
+   unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+   pdftoolbar=false,        % show Acrobat’s toolbar?
+   pdfmenubar=false,        % show Acrobat’s menu?
+   pdffitwindow=false,     % window fit to page when opened
+   pdfstartview={FitH},    % fits the width of the page to the window
+   pdftitle={Título chingón},    % title
+   pdfauthor={Yo mero},     % author
+   % pdfsubject={Subject},   % subject of the document
+   % pdfcreator={Creador},   % creator of the document
+   % pdfproducer={Productor}, % producer of the document
+   pdfnewwindow=true,      % links in new window
+}
+
+\title{Título chingón}
+\author{M. en C. Yo mero}
+
+\begin{document}
+	\pdfbookmark{Portada}{portada}
+	\input{portada.tex}
+	\clearemptydoublepage
+
+	\thispagestyle{empty}
+	\newgeometry{top=25mm,bottom=25mm,left=32.5mm,right=22.5mm}
+	\pagenumbering{Roman}
+
+	\thispagestyle{empty}
+	% \includepdf{./img/autorizacion.pdf} % Descomentar y agregar autorización
+	\clearemptydoublepage
+
+	\thispagestyle{empty}
+	% \includepdf{./img/liberacion.pdf} % Descomentar y agregar liberación
+	\clearemptydoublepage
+
+	\thispagestyle{empty}
+	\pdfbookmark{Resumen}{resumen}
+	\input{./abstract.tex}
+	\clearemptydoublepage
+
+	\thispagestyle{empty}
+	\phantomsection
+	\pdfbookmark{Agradecimientos}{thanks}
+	\input{./thanks.tex}
+	\clearemptydoublepage
+
+	\pagestyle{fancy}
+	\addtolength{\headheight}{1.4mm}
+	\fancyhead[RE,LO]{\it \nouppercase{\leftmark}}
+	\fancyhead[RO,LE]{\it \nouppercase{\rightmark}}
+	\rhead{  }
+	\lhead{  }
+	\lfoot{ }
+	\rfoot{ }
+	\renewcommand{\headrulewidth}{.5pt}
+	\renewcommand{\footrulewidth}{.3pt}
+	\pagenumbering{roman}
+	\pdfbookmark{\contentsname}{toc}
+
+	\fancyhead[RE,LO]{ }
+	\fancyhead[RO,LE]{\it \nouppercase{\rightmark}}
+	% \addcontentsline{toc}{chapter}{Índice general}
+	\tableofcontents
+	\clearemptydoublepage
+
+	\fancyhead[RE,LO]{\it \nouppercase{\leftmark}}
+	\fancyhead[RO,LE]{\it \nouppercase{\rightmark}}
+	\pagenumbering{arabic}
+
+	\include{intro}
+	\clearemptydoublepage
+	\include{backg}
+	\clearemptydoublepage
+	\include{thesis}
+	\clearemptydoublepage
+	\include{experim}
+	\clearemptydoublepage
+	\include{conc}
+	\clearemptydoublepage
+	\appendix
+	\fancyhead[RE,LO]{ }
+	\fancyhead[RO,LE]{\it \nouppercase{\rightmark}}
+	\include{appx}
+	\clearemptydoublepage
+
+
+	\phantomsection
+	\addcontentsline{toc}{chapter}{Bibliografía.}
+	\linespread{1}         %Espaciado entre renglones
+	\setlength\bibitemsep{2.5\itemsep}
+	\printbibliography
+\end{document}

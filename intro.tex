@@ -1,0 +1,27 @@
+\chapter{Introducción}
+\label{ch:intro}
+Resumen del capítulo.
+
+\section{Introducción.}
+	\label{sec:intro}
+	Se pueden agregar citas \cite{vampiro} o referencias a secciones como la sección \ref{sec:intro}. Para ecuaciones usar la Eq. \eqref{eq:asd}.
+
+	\begin{equation}
+		x = \frac{-b \pm \sqrt{b^2 - a\ c}}{2\ a}
+		\label{eq:asd}
+	\end{equation}
+
+
+	Las figuras se pueden agregar con el comando \texttt{input} y usar \texttt{scalebox} para definir el tamaño adecuado. Además el paquete \textit{tikz} permite la definición de diagramas a bloques.
+
+	\begin{figure}[!hbt]
+		\centering
+		\scalebox{0.88}{\input{./pgf/metodologia.tex}}
+		\caption{Metodología de solución del problema.}
+		\label{fig:metod}
+	\end{figure}
+
+
+\finalDeSec{Conclusiones de capítulo.}
+
+
